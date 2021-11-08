@@ -17,11 +17,11 @@ class Ship():
 
         # Store a decimal value for the ship's center.
         self.center = float(self.rect.centerx)
-        
+
         # Movement flags
         self.moving_right = False
         self.moving_left = False
-        
+
     def update(self):
         """Update the ship's position based on the movement flag."""
         # Update the ship's center value, not the rect.
@@ -33,8 +33,11 @@ class Ship():
 
         # Update rect object from self.center
         self.rect.centerx = self.center
-                            
+
     def blitme(self):
         """Fraw the ship at its current location."""
         self.screen.blit(self.image, self.rect)
-            
+
+    def center_ship(self):
+
+        self.center = self.screen_rect.centerx
